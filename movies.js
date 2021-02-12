@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', async function (event) {
 
 
   // let test = movies.length
-  // console.log(movies)
+  //console.log(movies)
   // console.log(test)
 
   // ⬆️ ⬆️ ⬆️ 
@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', async function (event) {
 
     movieList.insertAdjacentHTML('beforeend', ` 
       <div class = 'w-1/5 p-4 movie-${movieId}'>
-    <img src="https://image.tmdb.org/t/p/w500/${moviePosterPath}.jpg" class="w-full">
+    <img src="https://image.tmdb.org/t/p/w500/${moviePosterPath}" class="w-full">
     <a href="#" class="watched-button block text-center text-white bg-green-500 mt-4 px-4 py-2 rounded">I've watched this!</a>
   </div>`
     )
@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', async function (event) {
 
   for (let x = 0; x < watched.length; x++) {
     let watchedMovie = watched[x].data()
-    console.log(watchedMovie)
+    //console.log(watchedMovie)
 
     document.querySelector(`.movie-${watchedMovie.movieId}`).classList.add('opacity-20')
   }
@@ -104,7 +104,7 @@ window.addEventListener('DOMContentLoaded', async function (event) {
 
     button.addEventListener('click', async function (event) {
       event.preventDefault()
-      console.log(`${movieTitle} was watched`)
+      //console.log(`${movieTitle} was watched`)
     })
 
     button.addEventListener('click', async function (event) {
