@@ -72,13 +72,16 @@ window.addEventListener('DOMContentLoaded', async function (event) {
   // console.log(`Movies Watched: ${moviesWatched.size}`)
 
   let watched = moviesWatched.docs
-  // console.log(watched)
+  console.log(watched)
 
   for (let x = 0; x < watched.length; x++) {
     let watchedMovie = watched[x].data()
-    //console.log(watchedMovie)
+    console.log(watchedMovie)
 
-    document.querySelector(`.movie-${watchedMovie.movieId}`).classList.add('opacity-20')
+    let watchedId = watchedMovie.movieId
+    console.log(watchedId)
+
+    document.querySelector(`.movie-${watchedId} `).classList.add('opacity-20')
   }
 
   // ⬆️ ⬆️ ⬆️ 
@@ -146,4 +149,5 @@ window.addEventListener('DOMContentLoaded', async function (event) {
   //   database.
   // - Hint: you can use if (document) with no comparison
   //   operator to test for the existence of an object. */}
+  
 })
